@@ -7,17 +7,17 @@ module.exports = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: '/container/latest/',
+    publicPath: '/home/latest/',
   },
   devtool: 'source-map',
   plugins: [
     new ModuleFederationPlugin({
       name: 'home',
       remotes: {
-        about: `about@${domain}/about/remoteEntry.js`,
-        study: `study@${domain}/study/remoteEntry.js`,
-        projects: `projects@${domain}/projects/remoteEntry.js`,
-        blog: `blog@${domain}/blog/remoteEntry.js`,
+        about: `about@${domain}/about/latest/remoteEntry.js`,
+        study: `study@${domain}/study/latest/remoteEntry.js`,
+        projects: `projects@${domain}/projects/latest/remoteEntry.js`,
+        blog: `blog@${domain}/blog/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),
