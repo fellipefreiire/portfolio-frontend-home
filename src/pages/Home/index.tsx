@@ -13,7 +13,7 @@ export const Home = () => {
       <Sidebar />
       <S.HomeContainer>
         <h1>
-          Hi, I’m Felipe :)
+          Hi, I’m Felipe
           <br />
           welcome to my Portfolio
         </h1>
