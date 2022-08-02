@@ -15,7 +15,7 @@ export const Home = () => {
         <h1>
           Hi, I’m Felipe
           <br />
-          welcome to my Portfolios
+          welcome to my Portfolio
         </h1>
       </S.HomeContainer>
       <AboutSection />
