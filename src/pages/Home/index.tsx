@@ -20,7 +20,7 @@ export const Home = () => {
       </S.HomeContainer>
       <AboutSection />
       <StudySection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <BlogSection />
       <Contact />
     </>
