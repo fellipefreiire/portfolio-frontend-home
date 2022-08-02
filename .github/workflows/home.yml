@@ -7,6 +7,10 @@ on:
     paths:
       - "*"
 
+defaults:
+  run:
+    working-directory: home
+
 jobs:
   build:
     runs-on: ubuntu-latest
