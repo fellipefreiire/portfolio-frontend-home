@@ -13,9 +13,6 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'home',
-      exposes: {
-        './Sidebar': './src/components/Sidebar/index.tsx',
-      },
       remotes: {
         about: `about@${domain}/about/latest/remoteEntry.js`,
         study: `study@${domain}/study/latest/remoteEntry.js`,

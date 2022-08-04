@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import background from '../../assets/home-background.png'
 
+export const ContentWrapper = styled.main`
+  background-color: #121212;
+`
+
 export const HomeContainer = styled.section`
   background-image: url(${background});
   background-repeat: no-repeat;

@@ -23,9 +23,6 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'home',
       filename: 'remoteEntry.js',
-      exposes: {
-        './HomePage': './src/pages/Home/index.tsx',
-      },
       remotes: {
         about: 'about@http://localhost:8081/remoteEntry.js',
         study: 'study@http://localhost:8082/remoteEntry.js',

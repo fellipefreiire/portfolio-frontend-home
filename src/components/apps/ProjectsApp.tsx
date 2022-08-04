@@ -1,9 +1,9 @@
 // eslint-disable-next-line import/no-unresolved
-import { mount } from 'about/AboutApp'
+import { mount } from 'projects/ProjectsApp'
 import { useEffect, useRef } from 'react'
 import { useLocation, useNavigate, Location } from 'react-router-dom'
 
-export const AboutApp = () => {
+export const ProjectsApp = () => {
   const ref = useRef(null)
   const location = useLocation()
   const navigate = useNavigate()

@@ -24,14 +24,29 @@ export const Sidebar = () => {
               <House size={24} weight='fill' />
             </Link>
           </S.IconWrapper>
-          <S.IconWrapper active={pathname === '/about'}>
-            <User size={24} weight='fill' />
+          <S.IconWrapper
+            className={pathname === '/about' ? 'avoid-click' : ''}
+            active={pathname === '/about'}
+          >
+            <Link to='/about'>
+              <User size={24} weight='fill' />
+            </Link>
           </S.IconWrapper>
-          <S.IconWrapper active={pathname === '/study'}>
-            <Book size={24} weight='fill' />
+          <S.IconWrapper
+            className={pathname === '/study' ? 'avoid-click' : ''}
+            active={pathname === '/study'}
+          >
+            <Link to='/study'>
+              <Book size={24} weight='fill' />
+            </Link>
           </S.IconWrapper>
-          <S.IconWrapper active={pathname === '/projects'}>
-            <BagSimple size={24} weight='fill' />
+          <S.IconWrapper
+            className={pathname === '/projects' ? 'avoid-click' : ''}
+            active={pathname === '/projects'}
+          >
+            <Link to='/projects'>
+              <BagSimple size={24} weight='fill' />
+            </Link>
           </S.IconWrapper>
           <S.IconWrapper
             className={pathname === '/blog' ? 'avoid-click' : ''}
