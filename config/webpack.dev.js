@@ -24,7 +24,7 @@ module.exports = {
       name: 'home',
       filename: 'remoteEntry.js',
       exposes: {
-        './Sidebar': './src/components/Sidebar/index.tsx',
+        './HomePage': './src/pages/Home/index.tsx',
       },
       remotes: {
         about: 'about@http://localhost:8081/remoteEntry.js',

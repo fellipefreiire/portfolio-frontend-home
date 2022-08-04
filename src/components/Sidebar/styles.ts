@@ -39,7 +39,7 @@ export const IconWrapper = styled.li<IIconWrapperProps>`
   z-index: 11;
   transition: transform 1s;
 
-  button:focus {
+  a:focus {
     box-shadow: 0 0 0 0;
   }
 
@@ -65,14 +65,28 @@ export const IconWrapper = styled.li<IIconWrapperProps>`
         background: #121212;
       }
     `}
+
+  &.avoid-click {
+    pointer-events: none;
+    cursor: pointer;
+  }
 `
 
 interface IMenuBorder {
-  position: number
+  pathname: string
+}
+
+const ACTIVE_POSITION = {
+  '/': 37,
+  '/about': 117,
+  '/study': 197,
+  '/projects': 277,
+  '/blog': 357,
 }
 
 export const MenuBorder = styled.div<IMenuBorder>`
-  top: ${({ position }) => position}px;
+  top: ${({ pathname }) =>
+    ACTIVE_POSITION[pathname as keyof typeof ACTIVE_POSITION]}px;
   left: 99%;
   height: 68px;
   width: 2.4em;

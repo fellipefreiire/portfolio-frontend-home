@@ -1,2 +1,6 @@
 declare module '*.png'
 declare module '*.svg'
+declare module 'blog/BlogApp'
+declare module 'about/Section'
+declare module 'study/Section'
+declare module 'projects/Section'
