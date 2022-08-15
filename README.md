@@ -19,9 +19,14 @@ This is the Home project for my portfolio which is a micro frontend container th
   - https://github.com/fellipefreiire/portfolio-frontend-projects.git
 
 - install all packages using your package manager (eg):
+```javascript
 yarn or npm install
+```
 
-- start all the projects (they already has setup ports) with yarn dev or npm run dev
+- start all the projects (they already has setup ports) with
+```javascript
+yarn dev or npm run dev
+```
 
 - access http://localhost:8080
 
