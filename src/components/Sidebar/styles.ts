@@ -44,6 +44,12 @@ export const IconWrapper = styled.li<IIconWrapperProps>`
     box-shadow: 0 0 0 0;
   }
 
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &::before {
     content: '';
     z-index: -1;
@@ -55,6 +61,10 @@ export const IconWrapper = styled.li<IIconWrapperProps>`
     transition: background-color 1s, transform 1s;
   }
 
+  & svg {
+    color: #121212;
+  }
+
   ${({ active }) =>
     active &&
     css`
@@ -64,6 +74,10 @@ export const IconWrapper = styled.li<IIconWrapperProps>`
       &::before {
         transform: scale(1);
         background: #121212;
+      }
+
+      & svg {
+        color: white;
       }
     `}
 
