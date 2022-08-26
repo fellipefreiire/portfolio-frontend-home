@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import * as S from './styles'
 import { AboutApp } from '../../components/apps/AboutApp'
-import { StudyApp } from '../../components/apps/StudyApp'
+// import { StudyApp } from '../../components/apps/StudyApp'
 import { ProjectsApp } from '../../components/apps/ProjectsApp'
 // import { BlogApp } from '../../components/apps/BlogApp'
 import { Contact } from '../../components/Contact'
@@ -23,7 +23,7 @@ export const Home = () => {
         </Container>
       </S.HomeContainer>
       <AboutApp />
-      <StudyApp />
+      {/* <StudyApp /> */}
       <ProjectsApp />
       {/* <BlogApp /> */}
       <Contact />
