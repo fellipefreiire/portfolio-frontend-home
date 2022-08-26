@@ -6,8 +6,9 @@ export const ContactContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100vh;
-  min-height: 900px;
+  /* height: 100vh; */
+  /* min-height: 900px; */
+  padding-bottom: 120px;
 `
 
 export const FormWrapper = styled.div`
@@ -17,10 +18,22 @@ export const FormWrapper = styled.div`
   flex-direction: column;
   height: 100%;
   h1 {
-    font-size: 4.5rem;
+    font-size: 2rem;
     color: #00fea1;
     font-weight: bold;
     margin-bottom: 3rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.sizes.tabletPortraitUp}) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.sizes.desktopUp}) {
+    h1 {
+      font-size: 4.5rem;
+    }
   }
 `
 
@@ -46,7 +59,8 @@ export const Form = styled.form`
 
   textarea {
     height: 150px;
-    width: 560px;
+    /* width: 560px; */
+    max-width: 560px;
     resize: none;
     margin-bottom: 40px;
   }

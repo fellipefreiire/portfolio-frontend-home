@@ -6,7 +6,8 @@ import { GlobalStyle } from './styles/global/global'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Sidebar } from './components/Sidebar'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
+import { MobileMenu } from './components/MobileMenu'
 const AboutLazy = lazy(() =>
   import('./components/apps/AboutApp').then((module) => ({
     default: module.AboutApp,
@@ -22,23 +23,28 @@ const ProjectsLazy = lazy(() =>
     default: module.ProjectsApp,
   }))
 )
-const BlogLazy = lazy(() =>
-  import('./components/apps/BlogApp').then((module) => ({
-    default: module.BlogApp,
-  }))
-)
 
 export const App = () => {
+  const [screen, setScreen] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => setScreen(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  })
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={defaultTheme}>
-        <Sidebar />
+        {screen <= 1280 ? <MobileMenu /> : <Sidebar />}
         <Suspense fallback={<div>Loading</div>}>
           <Routes>
             <Route path='/about' element={<AboutLazy />} />
             <Route path='/study' element={<StudyLazy />} />
             <Route path='/projects' element={<ProjectsLazy />} />
-            <Route path='/blog/*' element={<BlogLazy />} />
             <Route path='/' element={<Home />} />
           </Routes>
         </Suspense>

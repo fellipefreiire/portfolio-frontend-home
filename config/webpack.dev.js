@@ -27,7 +27,7 @@ module.exports = {
         about: 'about@http://localhost:8081/remoteEntry.js',
         study: 'study@http://localhost:8082/remoteEntry.js',
         projects: 'projects@http://localhost:8083/remoteEntry.js',
-        blog: 'blog@http://localhost:8084/remoteEntry.js',
+        // blog: 'blog@http://localhost:8084/remoteEntry.js',
       },
       shared: packageJson.dependencies,
     }),

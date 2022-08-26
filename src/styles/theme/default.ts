@@ -19,5 +19,12 @@ export const defaultTheme = {
     'red-700': '#7A1921',
 
     'yellow-500': '#FBA94C',
-  }
+  },
+  sizes: {
+    phoneOnly: '599px',
+    tabletPortraitUp: '600px',
+    tabletLandscapeUp: '900px',
+    desktopUp: '1200px',
+    bigDesktopUp: '1800px',
+  },
 }

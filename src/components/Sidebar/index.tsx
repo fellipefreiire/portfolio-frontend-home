@@ -1,7 +1,7 @@
 import {
   BagSimple,
   Book,
-  GlobeHemisphereWest,
+  // GlobeHemisphereWest,
   House,
   User,
 } from 'phosphor-react'
@@ -48,14 +48,14 @@ export const Sidebar = () => {
               <BagSimple size={24} weight='fill' />
             </Link>
           </S.IconWrapper>
-          <S.IconWrapper
+          {/* <S.IconWrapper
             className={pathname === '/blog' ? 'avoid-click' : ''}
             active={pathname === '/blog'}
           >
             <Link to='/blog'>
               <GlobeHemisphereWest size={24} weight='fill' />
             </Link>
-          </S.IconWrapper>
+          </S.IconWrapper> */}
         </S.Content>
         <S.MenuBorder pathname={pathname} />
       </S.Navigation>
