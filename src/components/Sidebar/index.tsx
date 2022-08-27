@@ -1,10 +1,4 @@
-import {
-  BagSimple,
-  Book,
-  // GlobeHemisphereWest,
-  House,
-  User,
-} from 'phosphor-react'
+import { BagSimple, Book, House, User } from 'phosphor-react'
 import { Link, useLocation } from 'react-router-dom'
 
 import * as S from './styles'
@@ -48,14 +42,6 @@ export const Sidebar = () => {
               <BagSimple size={24} weight='fill' />
             </Link>
           </S.IconWrapper>
-          {/* <S.IconWrapper
-            className={pathname === '/blog' ? 'avoid-click' : ''}
-            active={pathname === '/blog'}
-          >
-            <Link to='/blog'>
-              <GlobeHemisphereWest size={24} weight='fill' />
-            </Link>
-          </S.IconWrapper> */}
         </S.Content>
         <S.MenuBorder pathname={pathname} />
       </S.Navigation>
